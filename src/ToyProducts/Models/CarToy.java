@@ -1,11 +1,13 @@
-package Toys;
+package ToyProducts.Models;
 
-public class Car {
+import ToyProducts.Toy;
+
+public class CarToy implements Toy{
     
     private final Integer serialNumber;
     private final String type = "Car";
 
-    public Car(Integer serialNumber) {
+    public CarToy(Integer serialNumber) {
         this.serialNumber = serialNumber;
     }
     
