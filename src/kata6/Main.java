@@ -1,6 +1,7 @@
 package kata6;
 
 import Toys.Car;
+import Toys.Helicopter;
 import Toys.SerialNumberGenerator;
 import java.util.Scanner;
 
@@ -20,6 +21,10 @@ public class Main {
                 Car car = new Car(serialNumberGenerator.next());
                 car.pack();
                 car.label();
+            }else if(command.equals("Helicopter")){
+                Helicopter helicopter = new Helicopter(serialNumberGenerator.next());
+                helicopter.pack();
+                helicopter.label();
             } else {
                 System.out.println("Comando desconocido");
             }
