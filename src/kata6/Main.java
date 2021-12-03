@@ -3,13 +3,14 @@ package kata6;
 import Toys.Car;
 import Toys.Helicopter;
 import Toys.SerialNumberGenerator;
+import Toys.ToyBusiness;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         
-        SerialNumberGenerator serialNumberGenerator = new SerialNumberGenerator();
+        ToyBusiness toyBusiness = new ToyBusiness();
         
         while(true){
             System.out.println("Introduce comando: ");
@@ -18,13 +19,9 @@ public class Main {
             if(command.equals("exit")){
                 break;
             }else if(command.equals("Car")){
-                Car car = new Car(serialNumberGenerator.next());
-                car.pack();
-                car.label();
+                toyBusiness.createCar();
             }else if(command.equals("Helicopter")){
-                Helicopter helicopter = new Helicopter(serialNumberGenerator.next());
-                helicopter.pack();
-                helicopter.label();
+                toyBusiness.createHelicopter();
             } else {
                 System.out.println("Comando desconocido");
             }
