@@ -1,16 +1,13 @@
 package kata6;
 
-import ToyProducts.Models.CarToy;
-import ToyProducts.Models.HelicopterToy;
-import Toys.SerialNumberGenerator;
-import Toys.ToyBusiness;
+import Branches.AmericanToyBusiness;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         
-        ToyBusiness toyBusiness = new ToyBusiness();
+        AmericanToyBusiness toyBusiness = new AmericanToyBusiness();
         
         while(true){
             System.out.println("Introduce comando: ");

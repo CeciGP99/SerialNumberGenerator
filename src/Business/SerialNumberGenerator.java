@@ -1,4 +1,4 @@
-package Toys;
+package Business;
 
 public class SerialNumberGenerator {
     
