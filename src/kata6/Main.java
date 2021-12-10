@@ -1,15 +1,21 @@
 package kata6;
 
 import Business.ToyBusiness;
-import Factories.RegionalFactories.AsianToyFactory;
+import Factories.RegionalFactories.AsianCarToyFactory;
+import Factories.RegionalFactories.AsianHelicopterToyFactory;
+import Factories.ToyFactory;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         
-        AsianToyFactory toyFactory = new AsianToyFactory();
-        ToyBusiness toyBusiness = new ToyBusiness(toyFactory);
+        ToyFactory carToyFactory = new AsianCarToyFactory();
+        ToyFactory helicopterToyFactory = new AsianHelicopterToyFactory();
+        ToyBusiness toyBusiness = new ToyBusiness();
+        
+        toyBusiness.add("Car", carToyFactory);
+        toyBusiness.add("Helicopter", helicopterToyFactory);
         
         while(true){
             System.out.println("Introduce comando: ");

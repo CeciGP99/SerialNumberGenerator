@@ -12,10 +12,10 @@ public class AsianCarToy implements Toy{
     }
     
     public void pack(){
-        System.out.println("El  con número de serie: " + serialNumber.toString() + " está empaquetado.\n");
+        System.out.println("El " + type +  " con número de serie: " + serialNumber.toString() + " está empaquetado.\n");
     }
     
     public void label(){
-        System.out.println("El  con número de serie: " + serialNumber.toString() + " está etiquetado.\n");
+        System.out.println("El " + type +  " con número de serie: " + serialNumber.toString() + " está etiquetado.\n");
     }
 }
