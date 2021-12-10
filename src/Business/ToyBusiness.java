@@ -9,7 +9,6 @@ import java.util.Map;
 public class ToyBusiness {
     
     private Map<String,ToyFactory> toyFactories = new HashMap<>();
-    private SerialNumberGenerator serialNumberGenerator = new SerialNumberGenerator();
 
     public ToyBusiness() {}
     
@@ -18,6 +17,6 @@ public class ToyBusiness {
     }
     
     public Toy produceToy(String name){
-        return toyFactories.get(name).produceToy(serialNumberGenerator.next());
+        return toyFactories.get(name).produceToy();
     }
 }

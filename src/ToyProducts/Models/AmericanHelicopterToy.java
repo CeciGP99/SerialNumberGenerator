@@ -1,13 +1,14 @@
 package ToyProducts.Models;
 
+import Factories.SerialNumberGenerator;
 import ToyProducts.Toy;
 
 public class AmericanHelicopterToy implements Toy{
     private final Integer serialNumber;
     private final String type = "Helicopter";
 
-    public AmericanHelicopterToy(Integer serialNumber) {
-        this.serialNumber = serialNumber;
+    public AmericanHelicopterToy() {
+        this.serialNumber = SerialNumberGenerator.getInstance().next();
     }
     
     public void pack(){

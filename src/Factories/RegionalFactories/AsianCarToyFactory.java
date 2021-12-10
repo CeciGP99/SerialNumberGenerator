@@ -8,7 +8,7 @@ import ToyProducts.Toy;
 public class AsianCarToyFactory extends ToyFactory{
 
     @Override
-    public Toy createToy(Integer serialNumber) {
-        return new AsianCarToy(serialNumber);
+    public Toy createToy() {
+        return new AsianCarToy();
     }
 }
